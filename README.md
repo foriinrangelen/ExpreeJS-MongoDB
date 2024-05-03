@@ -12,6 +12,7 @@
 2. `npm install mongoose` 로 설치
 3.  App에 MongoDB연결 확인 `await mongoose.connect(MONGO_URL)`
 4.  연결 TEST
-5. 스키마 생성
-6. 스키마를 이용해서 모델생성
-7. 모델을 이용해서 CRUD작업
+5.  `create model/products.model.js, products.controller.js `
+6. 스키마 생성
+7. 스키마를 이용해서 모델생성
+8. 모델을 이용해서 CRUD작업
