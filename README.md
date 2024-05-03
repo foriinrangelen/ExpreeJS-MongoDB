@@ -12,3 +12,31 @@
 2. `npm install mongoose` 로 설치
 3.  App에 MongoDB연결 확인 `await mongoose.connect(MONGO_URL)`
 4.  연결 TEST
+5. 스키마 생성
+6. 스키마를 이용해서 모델생성
+7. 모델을 이용해서 CRUD작업
+   ```javascript
+   const mongoose= require("mongoose");
+   // 1. constructor 함수를 mongoose에서제공, 새로운 스키마 정의가능
+   const productSchema= new moongoose.Schema({ 
+     name: {
+       type: String,
+       required: true
+     },
+       description: {
+       type: String,
+       required: true
+     },
+     price: {
+       type: Number
+     }
+   });
+   // 2. 모델생성 (CRUD 등의 작업을 위한 DB interface)
+   const Product= mongoose.model("product", productSchema)
+  // 3. 데이터추가
+   Product.create({
+      name: 'apple watch',
+      description: 'cool watch',
+      price: 1000
+   })
+   ```
