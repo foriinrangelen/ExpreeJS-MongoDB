@@ -33,7 +33,7 @@
    });
    // 2. 모델생성 (CRUD 등의 작업을 위한 DB interface)
    const Product= mongoose.model("product", productSchema)
-  // 3. 데이터추가
+   // 3. 데이터추가
    Product.create({
       name: 'apple watch',
       description: 'cool watch',
