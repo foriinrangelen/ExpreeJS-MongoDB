@@ -1,10 +1,6 @@
 // Model에서 데이터 가져오기
 const model= require('../Models/users.model')
 
-function getUsers(req, res) {
-    res.send(model);
-}
-
 
 function getUser(req, res) {
     // url :userId 파싱하기
@@ -25,10 +21,11 @@ function postUser(req, res) {
     if(!req.body.name) return res.status(400).json({error: "Missing user name"});
 
     const newUser= {
-        name:req.body.name,
         id:model.length,
+        name:req.body.name,
     }
-    users.push(newUser);
+    model.push(newUser);
+    console.log(model)
     res.json(newUser);
 }
 
