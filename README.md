@@ -11,7 +11,7 @@
 1. new project 생성 > Build a Database > Cluster 만들기 > MongoDB유저생성 > connect > drivers > url 가져오기
 2. `npm install mongoose` 로 설치
 3.  App에 MongoDB연결 확인 `await mongoose.connect(MONGO_URL)`
-4.  connect test `.then(()=> console.log('mongodb connected'))`
+4.  연결확인 `.then(()=> console.log('mongodb connected'))`
 5.  `create model/products.model.js, Controllers/products.controller.js `
 6. 스키마 생성
 7. 스키마를 이용해서 모델생성
